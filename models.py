@@ -72,7 +72,7 @@ class Cart:
         """
         if product not in self.products:
             raise ValueError(f'You cannot delete {product} because it is not in the cart')
-        if not remove_count or remove_count > self.products[product]:
+        if remove_count is None or remove_count > self.products[product]:
             del self.products[product]
         else:
             self.products[product] -= remove_count

@@ -47,8 +47,8 @@ class TestProducts:
 
     # TODO напишите проверки на метод buy
     def test_product_buy_left_more_than_zero(self, product):
-        product.buy(20)
-        assert product.quantity == 980
+        product.buy(25)
+        assert product.quantity == 975
 
     def test_product_buy_left_zero(self, product):
         product.buy(1000)
